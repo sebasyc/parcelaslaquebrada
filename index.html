@@ -54,11 +54,11 @@
 
     <section class="top-bg">
         <div class="top-bg__slide slide-top-bg">
-            <div class="slide-item-bg" style="background-image: url('/images/bg-test-1.jpg')"></div>
-            <div class="slide-item-bg" style="background-image: url('/images/bg-test-2.jpeg')"></div>
-            <div class="slide-item-bg" style="background-image: url('/images/bg-test-3.jpg')"></div>
-            <div class="slide-item-bg" style="background-image: url('/images/bg-test-4.jpg')"></div>
-            <div class="slide-item-bg" style="background-image: url('/images/bg-test-5.jpg')"></div>
+            <div class="slide-item-bg" style="background-image: url('images/bg-test-1.jpg')"></div>
+            <div class="slide-item-bg" style="background-image: url('images/bg-test-2.jpeg')"></div>
+            <div class="slide-item-bg" style="background-image: url('images/bg-test-3.jpg')"></div>
+            <div class="slide-item-bg" style="background-image: url('images/bg-test-4.jpg')"></div>
+            <div class="slide-item-bg" style="background-image: url('images/bg-test-5.jpg')"></div>
         </div>
         <div class="top-bg__txt">
             <img src="images/logo-white.svg" alt="Parcelas La Quebrada">
@@ -116,7 +116,7 @@
                             <h1>Nuestra ubicación</h1>
                         </div>
                         <h3>San Pedro, Melipilla, Chile</h3>
-                        <a href="#" class="main-btns">Ir a google Maps</a>
+                        <a href="https://maps.app.goo.gl/jetM5AzxVKjUAMhA6" class="main-btns">Ir a google Maps</a>
                         <h2>Cercanias</h2>
                         <ul class="location-txt__list">
                             <li>
@@ -155,6 +155,38 @@
     </section>
 
     <section class="gallery"></section>
+
+    <section class="contact" style="background-image: url('images/bg-contact.jpg')">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="contact-txt">
+                        <div class="titles titles--white">
+                            <h1>Contacto</h1>
+                        </div>
+                        <p>Ven a conocer tu nueva parcela, en medio de la naturaleza, tranquilidad y seguridad que solo el campo te puede brindar.</p>
+                        <p>Agenda una visita o solicita más información.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <form action="form.php" method="POST" class="contact-form">
+                        <ul class="contact-form__list">
+                            <li>
+                                <input type="text" name="nombre" placeholder="Nombre" required>
+                            </li>
+                            <li>
+                                <input type="email" name="email" placeholder="Email" required>
+                            </li>
+                            <li>
+                                <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+                            </li>
+                        </ul>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer>
         <section class="container">

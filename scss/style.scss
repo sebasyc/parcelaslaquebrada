@@ -52,6 +52,9 @@ html, body {
     color: $primary-color;
     font-weight: 600;
     transition: .3s;
+    @media (max-width: 480px) {
+        font-size: .875em;
+    }
     &:hover {
         background-color: $primary-color;
         color: $secondary-color;
@@ -474,22 +477,38 @@ header {
     display: flex;
     align-items: center;
     background-color: $primary-color;
+    @media (max-width: 992px) {
+        flex-direction: column;
+    }
     .container {
         position: absolute;
         left: 0;
         right: 0;
+        @media (max-width: 992px) {
+            position: relative;
+        }
         .location-txt {
             text-align: center;
+            @media (max-width: 480px) {
+                padding: 3em 0;
+            }
             h3 {
                 font-size: 1.125em;
                 color: white;
                 font-weight: 300;
+                @media (max-width: 480px) {
+                    font-size: 1em;
+                }
             }
             h2 {
                 margin: 2em 0 0;
                 font-size: 1.5em;
                 font-weight: 600;
                 color: white;
+                @media (max-width: 480px) {
+                    font-size: 1.25em;
+                    margin: 1em 0 0;
+                }
             }
             &__list {
                 display: flex;
@@ -504,11 +523,17 @@ header {
                         padding: 0;
                         font-size: .875em;
                         font-weight: 600;
+                        @media (max-width: 480px) {
+                            font-size: .75em;
+                        }
                     }
                     span {
                         color: $secondary-color;
                         font-weight: .875em;
                         font-weight: 600;
+                        @media (max-width: 480px) {
+                            font-size: .75em;
+                        }
                         i {
                             display: inline-block;
                             margin-left: .25em;
@@ -520,12 +545,21 @@ header {
     }
     &__col {
         width: 50%;
+        @media (max-width: 992px) {
+            width: 100%;
+        }
         iframe {
             position: relative;
             display: block;
             width: 100% !important;
             height: 600px;
             z-index: 1;
+            @media (max-width: 992px) {
+                height: 400px;
+            }
+            @media (max-width: 480px) {
+                height: 350px;
+            }
         }
     }
 }
@@ -533,6 +567,36 @@ header {
 .gallery {
     padding: 5em 0;
     background-color: #f2f2f2;
+}
+
+.contact {
+    position: relative;
+    padding: 5em 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    &:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(25, 68, 57, .65);
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+    .contact-txt {
+        position: relative;
+        z-index: 1;
+        p {
+            color: white;
+            font-weight: 300;
+        }
+    }
+    .contact-form {
+        position: relative;
+        z-index: 1;
+    }
 }
 
 footer {
@@ -593,6 +657,45 @@ footer {
             @media (max-width: 480px) {
                 font-size: .75em;
             }
+        }
+    }
+}
+
+.msg-exito {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 90vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    @media (max-width: 480px) {
+        height: 85vh;
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(25, 68, 57, .5);
+        top: 0;
+        left: 0;
+    }
+    .container {
+        position: relative;
+        z-index: 1;
+        img {
+            display: inline-block;
+            margin-bottom: 1em;
+            width: 180px;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: white;
+            font-weight: 600;
         }
     }
 }
