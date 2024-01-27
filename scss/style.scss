@@ -254,9 +254,13 @@ header {
                                 a {
                                     font-size: 1.25em;
                                     color: white;
+                                    transition: .3s;
                                     @media (max-width: 1025px) {
                                         font-size: 1.5em;
                                         color: $primary-color;
+                                    }
+                                    &:hover {
+                                        color: $secondary-color;
                                     }
                                 }
                             }
@@ -565,37 +569,188 @@ header {
 }
 
 .gallery {
-    padding: 5em 0;
+    position: relative;
+    padding: 8em 0;
     background-color: #f2f2f2;
+    overflow: hidden;
+    @media (max-width: 480px) {
+        padding: 3em 0;
+    }
+    .titles {
+        position: relative;
+        text-align: center;
+        z-index: 1;
+    }
+    .gallery-list {
+        position: relative;
+        width: 65%;
+        margin: 2em auto 0;
+        z-index: 1;
+        @media (max-width: 768px) {
+            width: auto;
+        }
+        @media (max-width: 480px) {
+            margin: 1em -15px 0;
+        }
+        ul {
+            li {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .slick-arrow {
+        width: 50px;
+        height: 50px;
+        @media (max-width: 768px) {
+            display: none;
+        }
+        &.slick-prev {
+            left: -70px;
+            z-index: 1;
+            &:before {
+                content: "\F12F";
+                font-family: bootstrap-icons!important;
+                font-size: 50px;
+                color: $primary-color;
+            }
+        }
+        &.slick-next {
+            right: -70px;
+            @media (max-width: 768px) {
+                right: 10px;
+            }
+            &:before {
+                content: "\F138";
+                font-family: bootstrap-icons!important;
+                font-size: 50px;
+                color: $primary-color;
+            }
+        }
+    }
+    .slick-dots {
+        bottom: -40px;
+        li {
+            button {
+                &:before {
+                    font-size: 40px;
+                    color: $primary-color;
+                }
+            }
+        }
+    }
 }
 
 .contact {
     position: relative;
-    padding: 5em 0;
+    padding: 8em 0;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    @media (max-width: 480px) {
+        padding: 3em 0 0;
+        background-image: none !important;
+    }
     &:before {
         content: "";
         position: absolute;
         width: 100%;
         height: 100%;
-        background-color: rgba(25, 68, 57, .65);
+        background-color: rgba(25, 68, 57, .5);
         top: 0;
         left: 0;
         z-index: 1;
+        @media (max-width: 480px) {
+            background-color: rgba(25, 68, 57, 1);
+        }
     }
     .contact-txt {
         position: relative;
         z-index: 1;
+        @media (max-width: 480px) {
+            padding: 0 0 1em;
+        }
+        .titles {
+            @media (max-width: 480px) {
+                margin-bottom: 1em;
+            }
+        }
         p {
+            font-size: 1.125em;
             color: white;
             font-weight: 300;
+            @media (max-width: 480px) {
+                font-size: 1em;
+            }
         }
     }
     .contact-form {
         position: relative;
         z-index: 1;
+        &__list {
+            width: 80%;
+            margin: 0 auto;
+            padding: 3em 2em;
+            background-color: white;
+            box-shadow: -3px 3px 10px rgba(0, 0, 0, .15);
+            @media (max-width: 480px) {
+                width: auto;
+                padding: 2em 1em;
+                margin: 1em -15px 0;
+            }
+            li {
+                padding: .5em 0;
+                text-align: center;
+                h2 {
+                    padding: 0 0 1em;
+                    font-size: 1.5em;
+                    text-align: center;
+                }
+                input {
+                    display: block;
+                    width: 100%;
+                    height: 50px;
+                    padding-left: 1em;
+                    background-color: #eeeeee;
+                    border: none;
+                    border-radius: 5px;
+                    appearance: none;
+                    color: $primary-color;
+                    &::placeholder {
+                        color: $primary-color;
+                    }
+                }
+                textarea {
+                    display: block;
+                    width: 100%;
+                    height: 150px;
+                    padding-top: .5em;
+                    padding-left: 1em;
+                    background-color: #eeeeee;
+                    border: none;
+                    border-radius: 5px;
+                    resize: none;
+                    appearance: none;
+                    color: $primary-color;
+                    &::placeholder {
+                        color: $primary-color;
+                    }
+                }
+                input, textarea {
+                    transition: .3s;
+                    &:focus {
+                        box-shadow: 0 0 0 3px rgba(25, 68, 57, .15);
+                    }
+                }
+                button {
+                    &.main-btns {
+                        margin: .5em 0 0;
+                        border: none;
+                    }
+                }
+            }
+        }
     }
 }
 
