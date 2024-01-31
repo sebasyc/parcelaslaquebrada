@@ -53,7 +53,15 @@ $(document).ready( function() {
         dots: true,
         arrows: false,
         pauseOnHover: false,
-        pauseOnDotsHover: false
+        pauseOnDotsHover: false,
+        responsive: [
+            {
+                breakpoint: 769,
+                settings: {
+                    arrows: true
+                }
+            }
+        ]
       })
 
       $('.gallery-list ul').slick({
@@ -61,7 +69,6 @@ $(document).ready( function() {
         slidesToScroll: 1,
         dots: true,
         infinite: true,
-        speed: 1000,
         dots: true,
         arrows: true
       })
