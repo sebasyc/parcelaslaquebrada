@@ -734,6 +734,7 @@ header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     @media (max-width: 480px) {
         padding: 3em 0 0;
         background-image: none !important;
