@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/lity.min.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/slick-theme.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -26,12 +26,12 @@
     <header>
         <section class="container">
             <div class="row row-header">
-                <div class="col-4 row-header__col row-header__col--logo">
+                <div class="col-2 row-header__col row-header__col--logo">
                     <a href="#intro" data-scroll>
                         <img src="images/logo.svg" alt="Parcelas La Quebrada">
                     </a>
                 </div>
-                <div class="col-8 row-header__col row-header__col--menu">
+                <div class="col-10 row-header__col row-header__col--menu">
                     <div class="btn-colapse-xs">
                         <span class="line line--l1"></span>
                         <span class="line line--l2"></span>
@@ -42,6 +42,7 @@
                         <li class="nav-menu__item"><a href="#location" data-scroll>¿Cómo llegar?</a></li>
                         <li class="nav-menu__item"><a href="#gallery" data-scroll>Galería</a></li>
                         <li class="nav-menu__item"><a href="#contact" data-scroll>Contáctanos</a></li>
+                        <li class="nav-menu__item nav-menu__item--map"><a href="/map.html">Ver planos</a></li>
                         <li class="nav-menu__item nav-menu__item--whatsapp"><a href="https://api.whatsapp.com/send/?phone=56954137958" data-scroll><i class="bi bi-whatsapp"></i><span>+56 9 5413 7958</span></a></li>
                         <li class="nav-menu__social">
                             <ul class="nav-social">
@@ -92,7 +93,10 @@
                             <li>Camino principal de 10 metros de ancho</li>
                             <li>66.000 m2 de senderos en medio de bosque nativo y tranque para uso común.</li>
                         </ul>
-                        <a href="#location" class="main-btns main-btns--black" data-scroll>¿Cómo llegar?</a>
+                        <div class="box-txt-project__btns">
+                            <a href="#location" class="main-btns main-btns--black" data-scroll>¿Cómo llegar?</a>
+                            <a href="/map.html" class="main-btns main-btns--map">Ver planos</a>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-8">
@@ -166,14 +170,36 @@
             </div>
             <div class="gallery-list" data-aos="fade-up" data-aos-duration="1000">
                 <ul>
-                    <li><img src="http://imgfz.com/i/2kZHGfw.png"></li>
-                    <li><img src="http://imgfz.com/i/0eHdoDX.png"></li>
-                    <li><img src="http://imgfz.com/i/3Gc6dmY.png"></li>
-                    <li><img src="http://imgfz.com/i/4yJHtXi.png"></li>
-                    <li><img src="http://imgfz.com/i/wsL5Q39.png"></li>
-                    <li><img src="http://imgfz.com/i/HmKTFRv.png"></li>
-                    <li><img src="http://imgfz.com/i/rXqJA9P.png"></li>
-                    <li><img src="http://imgfz.com/i/6PVoxRm.png"></li>
+                    <li>
+                        <a href="http://imgfz.com/i/2kZHGfw.png" data-lity><img src="http://imgfz.com/i/2kZHGfw.png"></a>
+                    </li>
+                    <li>
+                        <a href="http://imgfz.com/i/0eHdoDX.png" data-lity><img src="http://imgfz.com/i/0eHdoDX.png"></a>
+                    </li>
+                    <li>
+                        <a href="http://imgfz.com/i/3Gc6dmY.png" data-lity><img src="http://imgfz.com/i/3Gc6dmY.png"></a>
+                    </li>
+                    <li>
+                        <a href="http://imgfz.com/i/4yJHtXi.png" data-lity><img src="http://imgfz.com/i/4yJHtXi.png"></a>
+                    </li>
+                    <li>
+                        <a href="http://imgfz.com/i/wsL5Q39.png" data-lity><img src="http://imgfz.com/i/wsL5Q39.png"></a>
+                    </li>
+                    <li>
+                        <a href="http://imgfz.com/i/HmKTFRv.png" data-lity><img src="http://imgfz.com/i/HmKTFRv.png"></a>
+                    </li>
+                    <li>
+                        <a href="http://imgfz.com/i/rXqJA9P.png" data-lity><img src="http://imgfz.com/i/rXqJA9P.png"></a>
+                    </li>
+                    <li>
+                        <a href="http://imgfz.com/i/6PVoxRm.png" data-lity><img src="http://imgfz.com/i/6PVoxRm.png"></a>
+                    </li>
+                    <li>
+                        <a href="http://imgfz.com/i/WAeMUSN.png" data-lity><img src="http://imgfz.com/i/WAeMUSN.png"></a>
+                    </li>
+                    <li>
+                        <a href="http://imgfz.com/i/w0lzucq.png" data-lity><img src="http://imgfz.com/i/w0lzucq.png"></a>
+                    </li>
                 </ul>
             </div>
             <a href="#contact" class="main-btns" data-scroll>Contáctanos</a>
@@ -288,6 +314,7 @@
     <script src="js/main.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/lity.min.js"></script>
     <script src="js/aos.js"></script>
 </body>
 </html>

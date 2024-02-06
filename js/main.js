@@ -65,12 +65,20 @@ $(document).ready( function() {
       })
 
       $('.gallery-list ul').slick({
-        slidesToShow: 1,
+        slidesToShow: 3,
         slidesToScroll: 1,
         dots: true,
         infinite: true,
-        dots: true,
-        arrows: true
+        dots: false,
+        arrows: true,
+        responsive: [
+            {
+                breakpoint: 769,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
       })
 
       AOS.init({

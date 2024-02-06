@@ -86,7 +86,7 @@ html, body {
         display: inline-block;
         padding: 0 0 .75em;
         font-size: 2em;
-        color: $primary-color;
+        color: $gray-txt;
         font-weight: 600;
         @media (max-width: 480px) {
             font-size: 1.5em;
@@ -111,6 +111,10 @@ html, body {
             color: white;
         }
     }
+}
+
+.lity {
+    background: rgba(0, 0, 0, .8);
 }
 
 header {
@@ -209,7 +213,7 @@ header {
                         overflow: auto;
                     }
                     &__item {
-                        padding-left: 2em;
+                        padding-left: 1.5em;
                         @media (max-width: 1025px) {
                             padding: 0;
                             border-bottom: 1px solid $secondary-color;
@@ -229,6 +233,29 @@ header {
                             i {
                                 display: block;
                                 font-size: 1.25em;
+                            }
+                        }
+                        &--map {
+                            padding: 2em 0 2em 15px;
+                            a {
+                                display: block;
+                                background-color: #ff6347;
+                                box-shadow: 0 0 0 6px rgba(255, 99, 71, .35);
+                                align-items: center;
+                                padding: .3em 1em;
+                                border-radius: 50px;
+                                font-weight: 600;
+                                font-size: 15px;
+                                color: white !important;
+                                @media (max-width: 1025px) {
+                                    display: inline-block;
+                                    font-size: 16px;
+                                    font-weight: 700;
+                                }
+                                &:hover {
+                                    background-color: $gray-txt;
+                                    box-shadow: 0 0 0 6px rgba(51, 51, 51, .35);
+                                }
                             }
                         }
                         &--whatsapp {
@@ -313,7 +340,7 @@ header {
                     .nav-menu {
                         &__item {
                             a {
-                                color: $primary-color;
+                                color: $gray-txt;
                                 &:hover {
                                     color: $secondary-color;
                                 }
@@ -331,7 +358,7 @@ header {
                             .nav-social {
                                 li {
                                     a {
-                                        color: $primary-color;
+                                        color: $gray-txt;
                                         &:hover {
                                             color: $secondary-color;
                                         }
@@ -483,6 +510,25 @@ header {
         }
         .main-btns {
             margin: 1em 0 0;
+        }
+        &__btns {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            .main-btns {
+                display: block;
+                margin-right: 1em;
+                &--map {
+                    background-color: #ff6347;
+                    box-shadow: 0 0 0 6px rgba(255, 99, 71, .35);
+                    color: white;
+                    font-weight: 700;
+                    &:hover {
+                        background-color: $gray-txt;
+                        box-shadow: 0 0 0 6px rgba(51, 51, 51, .35);
+                    }
+                }
+            }
         }
     }
     .box-img-project {
@@ -637,9 +683,9 @@ header {
 
 .gallery {
     position: relative;
-    padding: 8em 0;
-    background-color: #f2f2f2;
+    padding: 8em 0 3em;
     overflow: hidden;
+    z-index: 1;
     @media (max-width: 480px) {
         padding: 3em 0 2em;
     }
@@ -656,7 +702,6 @@ header {
     }
     .gallery-list {
         position: relative;
-        width: 65%;
         margin: 2em auto 0;
         z-index: 1;
         @media (max-width: 768px) {
@@ -667,22 +712,53 @@ header {
         }
         ul {
             li {
-                img {
-                    width: 100%;
+                padding: 0 8px;
+                @media (max-width: 768px) {
+                    padding: 0;
+                }
+                a {
+                    position: relative;
+                    display: block;
+                    &:before {
+                        content: "\F14D";
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: rgba(0, 0, 0, .5);
+                        opacity: 0;
+                        top: 0;
+                        left: 0;
+                        font-size: 30px;
+                        color: $secondary-color;
+                        font-family: bootstrap-icons!important;
+                        transition: .3s;
+                    }
+                    &:hover {
+                        &:before {
+                            opacity: 1;
+                        }
+                    }
+                    img {
+                        width: 100%;
+                    }
                 }
             }
         }
     }
     .slick-arrow {
-        width: 50px;
-        height: 50px;
+        width: 40px;
+        height: 40px;
+        background-color: $primary-color;
         @media (max-width: 768px) {
             width: 40px;
             height: 40px;
             background-color: $primary-color;
         }
         &.slick-prev {
-            left: -70px;
+            left: -10px;
             z-index: 1;
             @media (max-width: 768px) {
                 left: 0;
@@ -690,8 +766,8 @@ header {
             &:before {
                 content: "\F12F";
                 font-family: bootstrap-icons!important;
-                font-size: 50px;
-                color: $primary-color;
+                font-size: 32px;
+                color: $secondary-color;
                 @media (max-width: 768px) {
                     font-size: 25px;
                     color: $secondary-color;
@@ -699,29 +775,18 @@ header {
             }
         }
         &.slick-next {
-            right: -70px;
+            right: -10px;
             @media (max-width: 768px) {
                 right: 0;
             }
             &:before {
                 content: "\F138";
                 font-family: bootstrap-icons!important;
-                font-size: 50px;
-                color: $primary-color;
+                font-size: 32px;
+                color: $secondary-color;
                 @media (max-width: 768px) {
                     font-size: 25px;
                     color: $secondary-color;
-                }
-            }
-        }
-    }
-    .slick-dots {
-        bottom: -40px;
-        li {
-            button {
-                &:before {
-                    font-size: 40px;
-                    color: $primary-color;
                 }
             }
         }
@@ -1109,6 +1174,272 @@ footer {
                     transition: .3s;
                     &:hover {
                         color: $secondary-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+body {
+    &.page-map {
+        header {
+            position: relative;
+            background-color: white;
+            box-shadow: 0 2px 16px rgba(0, 0, 0,.1);
+            .row-header {
+                &__col {
+                    &--logo {
+                        a {
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+                    &--menu {
+                        .nav-menu {
+                            &__item {
+                                a {
+                                    color: $gray-txt;
+                                    &:hover {
+                                        color: $secondary-color;
+                                    }
+                                }
+                                &--whatsapp {
+                                    a {
+                                        color: #103928;
+                                        &:hover {
+                                            color: #103928;
+                                        }
+                                    }
+                                }
+                            }
+                            &__social {
+                                .nav-social {
+                                    li {
+                                        a {
+                                            color: $gray-txt;
+                                            &:hover {
+                                                color: $secondary-color;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #map {
+            .ol-viewport {
+                cursor: move;
+            }
+            .map-logo {
+                position: absolute;
+                width: 200px;
+                height: 200px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: rgba(255, 255, 255, .85);
+                top: 0;
+                left: 100px;
+                z-index: 1;
+                @media (max-width: 769px) {
+                    width: 150px;
+                    height: 150px;
+                    left: 30px;
+                }
+                img {
+                    width: 150px;
+                    @media (max-width: 769px) {
+                        width: 120px;
+                    }
+                }
+            }
+            .content-details {
+                position: absolute;
+                width: 100%;
+                background-color: rgba(25, 68, 57, .85);
+                padding: 2em 0;
+                bottom: 0;
+                left: 0;
+                z-index: 1;
+                @media (max-width: 769px) {
+                    padding: 1em 0;
+                }
+                .container {
+                    display: flex;
+                    justify-content: space-between;
+                    @media (max-width: 769px) {
+                        flex-direction: column;
+                    }
+                }
+                .map-details {
+                    display: flex;
+                    align-items: center;
+                    @media (max-width: 769px) {
+                        padding-bottom: 1em;
+                        flex-wrap: wrap;
+                    }
+                    &__item {
+                        position: relative;
+                        padding-right: 1.5em;
+                        font-size: 1em;
+                        color: white;
+                        @media (max-width: 769px) {
+                            width: 100%;
+                            padding-right: .5em;
+                            font-size: 14px;
+                        }
+                        a {
+                            display: flex;
+                            align-items: center;
+                            padding-right: 1.5em;
+                            color: white;
+                            font-weight: 600;
+                            text-decoration: underline;
+                            transition: .3s;
+                            @media (max-width: 769px) {
+                                padding-right: 0;
+                            }
+                            &:hover {
+                                color: $secondary-color;
+                            }
+                            i {
+                                display: block;
+                                margin-right: 0;
+                                font-size: 2em;
+                            }
+                            span {
+                                display: block;
+                            }
+                        }
+                        &--1, &--2 {
+                            padding-left: 1.85em;
+                            @media (max-width: 769px) {
+                                width: 50%;
+                                margin-top: .5em;
+                                margin-bottom: 1em;
+                                padding-left: 2em;
+                                font-size: 16px;
+                            }
+                            &:before {
+                                content: "";
+                                position: absolute;
+                                width: 20px;
+                                height: 20px;
+                                border-radius: 100%;
+                                left: 0;
+                                top: 1px;
+                                @media (max-width: 769px) {
+                                    top: 0;
+                                }
+                            }
+                        }
+                        &--1 {
+                            &:before {
+                                background-color: #3fc94b;
+                                box-shadow: 0 0 0 5px rgba(63, 201, 75, .35);
+                            }
+                        }
+                        &--2 {
+                            &:before {
+                                background-color: #fe6446;
+                                box-shadow: 0 0 0 5px rgba(254, 100, 70, .35);
+                            }
+                        }
+                    }
+                }   
+                .map-contact {
+                    display: flex;
+                    align-items: center;
+                    &__item {
+                        padding-right: 1em;
+                        &--whatsapp {
+                            @media (max-width: 1025px) {
+                                display: flex;
+                                border: none;
+                                margin-left: 15px;
+                            }
+                            a {
+                                display: flex;
+                                background-color: #25d366;
+                                align-items: center;
+                                padding: .3em 1em;
+                                border-radius: 50px;
+                                font-weight: 600;
+                                font-size: 15px;
+                                color: #103928;
+                                @media (max-width: 769px) {
+                                    font-size: .875em;
+                                }
+                                &:hover {
+                                    color: $primary-color;
+                                    box-shadow: 0 0 0 6px rgba(37, 211, 102, .35);
+                                }
+                                i, span {
+                                    display: block;
+                                }
+                                i {
+                                    font-size: 20px;
+                                    margin-right: .35em;
+                                }
+                            }
+                        }
+                        &--social {
+                            .nav-social {
+                                display: flex;
+                                align-items: center;
+                                li {
+                                    padding-left: .75em;
+                                    color: white;
+                                    @media (max-width: 769px) {
+                                        font-size: 14px;
+                                        padding-left: 1em;
+                                    }
+                                    a {
+                                        display: block;
+                                        font-size: 20px;
+                                        color: white;
+                                        transition: .3s; 
+                                        &:hover {
+                                            color: $secondary-color;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .ol-zoom {
+            &.ol-unselectable {
+                &.ol-control {
+                    bottom: 130px;
+                    right: 20px;
+                    top: auto;
+                    left: auto;
+                    background-color: rgba(141, 216, 21, .85);
+                    @media (max-width: 769px) {
+                        bottom: 200px;
+                    }
+                    button {
+                        width: 50px;
+                        height: 50px;
+                        background-color: white;
+                        font-size: 1.25em;
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+        .ol-attribution {
+            &.ol-unselectable {
+                &.ol-control {
+                    &.ol-uncollapsible {
+                        display: none;
                     }
                 }
             }
