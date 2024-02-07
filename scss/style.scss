@@ -450,6 +450,37 @@ header {
                 }
             }
         }
+        .btns-top {
+            display: flex;
+            align-items: center;
+            a {
+                display: block;
+                &.main-btns {
+                    @media (max-width: 1025px) {
+                        font-size: 15px;
+                    }
+                    &--map {
+                        display: none;
+                        margin-left: .75em;
+                        background-color: #ff6347;
+                        box-shadow: 0 0 0 6px rgba(255, 99, 71, .35);
+                        align-items: center;
+                        padding: .3em 1em;
+                        border-radius: 50px;
+                        font-weight: 600;
+                        font-size: 15px;
+                        color: white !important;
+                        @media (max-width: 1025px) {
+                            display: block;
+                        }
+                        &:hover {
+                            background-color: $gray-txt;
+                            box-shadow: 0 0 0 6px rgba(51, 51, 51, .35);
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
