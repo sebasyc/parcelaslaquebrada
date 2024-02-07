@@ -1322,7 +1322,7 @@ body {
                                 margin-top: .5em;
                                 margin-bottom: 1em;
                                 padding-left: 2em;
-                                font-size: 16px;
+                                font-size: 14px;
                             }
                             &:before {
                                 content: "";
@@ -1360,7 +1360,6 @@ body {
                             @media (max-width: 1025px) {
                                 display: flex;
                                 border: none;
-                                margin-left: 15px;
                             }
                             a {
                                 display: flex;
@@ -1372,7 +1371,7 @@ body {
                                 font-size: 15px;
                                 color: #103928;
                                 @media (max-width: 769px) {
-                                    font-size: .875em;
+                                    font-size: 13px;
                                 }
                                 &:hover {
                                     color: $primary-color;
@@ -1384,6 +1383,9 @@ body {
                                 i {
                                     font-size: 20px;
                                     margin-right: .35em;
+                                    @media (max-width: 769px) {
+                                        font-size: 16px;
+                                    }
                                 }
                             }
                         }
