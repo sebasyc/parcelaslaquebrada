@@ -1289,6 +1289,7 @@ body {
                         color: white;
                         @media (max-width: 769px) {
                             width: 100%;
+                            display: flex;
                             padding-right: .5em;
                             font-size: 14px;
                         }
