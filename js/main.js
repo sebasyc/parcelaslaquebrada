@@ -81,6 +81,23 @@ $(document).ready( function() {
         ]
       })
 
+      $('.gallery-video-list ul').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        dots: true,
+        infinite: false,
+        dots: false,
+        arrows: true,
+        responsive: [
+            {
+                breakpoint: 769,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
+      })
+
       AOS.init({
         once: true,
         disable: 'mobile'
